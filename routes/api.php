@@ -26,7 +26,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //tabla juego
 Route::get('/juego', [JuegosController::class, 'index']);
 Route::post('/juego', [JuegosController::class, 'store']);
-Route::put('/juegos/{id}', [JuegosController::class, 'update']);
+Route::put('/juego/{id}', [JuegosController::class, 'update']);
 Route::delete('/juego/{id}', [JuegosController::class, 'destroy']);
 
 //tabla tema
@@ -43,13 +43,13 @@ Route::delete('/user/{id}', [UsersController::class, 'destroy']);
 
 //tabla categoria
 Route::get('/categoria', [CategoriasController::class, 'index']);
-Route::post('categoria', [CategoriasController::class, 'store']);
+Route::post('/categoria', [CategoriasController::class, 'store']);
 Route::put('/categoria/{id}', [CategoriasController::class, 'update']);
 Route::delete('/categoria/{id}', [CategoriasController::class, 'destroy']);
 
-//tabla 
+//tabla retroalimentacion
 Route::get('/retro', [RetroalimentacionesController::class, 'index']);
-Route::post('rerto', [RetroalimentacionesController::class, 'store']);
+Route::post('/retro', [RetroalimentacionesController::class, 'store']);
 Route::put('/retro/{id}', [RetroalimentacionesController::class, 'update']);
 Route::delete('/retro/{id}', [RetroalimentacionesController::class, 'destroy']);
 

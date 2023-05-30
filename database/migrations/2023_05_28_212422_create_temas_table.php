@@ -13,10 +13,11 @@ class CreateTemasTable extends Migration
             $table->string('titulo');
             $table->string('descripcion');
             $table->string('imagen');
-            
+
             // Hacemos la relación con la tabla "juegos"
             $table->foreignId('id_juegos')->constrained('juegos')
                 ->cascadeOnUpdate()->cascadeOnDelete();
+            $table->timestamps();
         });
     }
 
@@ -25,5 +26,3 @@ class CreateTemasTable extends Migration
         Schema::dropIfExists('temas');
     }
 }
-
-

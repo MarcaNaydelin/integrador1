@@ -18,7 +18,6 @@ class TemasController extends Controller
         $tema=new Tema();
         $tema->titulo=$request->titulo;
         $tema->descripcion=$request->descripcion;
-        $tema->imagen=$request->imagen;
         $tema->id_juegos=$request->id_juegos;
         $tema->save();
         return $tema;
@@ -30,7 +29,6 @@ class TemasController extends Controller
         $tema=Tema::find($id);
         $tema->titulo=$request->titulo;
         $tema->descripcion=$request->descripcion;
-        $tema->imagen=$request->imagen;
         $tema->id_juegos=$request->id_juegos;
         $tema->save();
         return $tema;

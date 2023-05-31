@@ -12,7 +12,6 @@ class Tema extends Model
     protected $fillable = [
         'titulo',
         'descripcion',
-        'imagen',
         'id_juegos'
     ];
     
